@@ -13,7 +13,7 @@ const App = () => {
     <Router>
       <div className="min-h-screen bg-gray-900 text-white font-sans">
         <nav className="p-4 bg-gray-800 flex justify-between items-center shadow-lg">
-          <h1 className="text-2xl font-bold">Physics Portfolio</h1>
+          <h1 className="text-2xl font-bold">Suka Sriyansu Pattanaik</h1>
           <div className="space-x-4">
             <NavLink to="/" className="hover:text-gray-400">Home</NavLink>
             <NavLink to="/about" className="hover:text-gray-400">About</NavLink>

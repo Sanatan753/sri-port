@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Projects.css";
+import Stars from "./Stars"; // Import the Stars component
 
 const projects = [
   {
@@ -23,6 +24,8 @@ const projects = [
 const Projects = () => {
   return (
     <div className="projects-container">
+      
+      
       <motion.h1 
         className="projects-title"
         initial={{ opacity: 0, y: -20 }}
@@ -46,6 +49,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+      <Stars /> {/* Add the falling stars animation */}
     </div>
   );
 };

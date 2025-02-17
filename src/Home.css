@@ -1,43 +1,73 @@
-/* Home Page Styles */
-
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
-    padding: 20px;
-    background-color: #111827; /* Dark background */
-    color: white;
-  }
-  
-  .home-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .home-description {
-    font-size: 1.2rem;
-    color: #9CA3AF; /* Gray text */
-    max-width: 600px;
-  }
-  
-  .home-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #2563EB; /* Blue button */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .home-button:hover {
-    background-color: #1D4ED8; /* Darker blue on hover */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  color: #e0e0e0;
+  padding: 20px;
+  background: url("./Background.jpeg") no-repeat center center/cover;
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay effect */
+  z-index: 1;
+}
+
+.profile-pic-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00a8cc;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-title, .home-description, .home-button {
+  position: relative;
+  z-index: 2; /* Ensures text and buttons appear above overlay */
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+}
+
+.home-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #00a8cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #007b9e;
+}
